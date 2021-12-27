@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Biaya Listrik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="kontainer">
+        <header>
+            <h1 id="title" class="text-center">Simulasi Biaya Listrik Sintang Pelanggan Rumah Tangga</h1>
+        </header>
+        <form action="javascript:void(calc())">
+            <input class="form-control" id="watt" type="text" placeholder="Total Watt">
+            <br>
+            <input class="form-control" id="jam" type="text" placeholder="Total Jam">
+            <br>
+            <button class="btn btn-success btn-lg">HITUNG</button>
+            </br>
+            </br>
+            <div class="results">
+                <p><strong>1 KWh (1444.7 Untuk Sintang)&nbsp; <span id="tip"></span></strong></p>
+                <p><strong>Total Harga KWh (Penggunaan):&nbsp; <span id="total"></span></strong></p>
+                <p><strong>Total Pemakaian 30 Hari:&nbsp; <span id="splitTotal"></span></strong></p>
+            </div>
+        </form>
+        <br>
+    </div>
+    <div class="atribusi">
+        <p>Code By Gusti Muhammad Aldi Rifqi</p>
+    </div>
+    <script>
+        var calc = function() {
+            var watt = Number(document.getElementById('watt').value);
+            var jam = Number(document.getElementById('jam').value);
+            var KWh = watt / 1000;
+            var totalBill = KWh * 1444.7;
+            var totalPemakaian = totalBill * jam;
+            var bills1month = totalPemakaian * 30;
+            document.getElementById("total").innerHTML = "Rp. " + Number(totalBill).toFixed(2);
+            document.getElementById("splitTotal").innerHTML = "Rp. " + Number(bills1month).toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

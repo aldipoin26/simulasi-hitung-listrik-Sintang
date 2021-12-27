@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* ### Neutral*/
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(215, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+p {
+    font-weight: 300;
+    text-align: center;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-bg);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25rem;
+}
+
+.kontainer {
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: -10px -8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kontainer h1 {
+    text-align: center;
+    align-items: center;
+    color: var(--white);
+    margin: 1rem 0.5rem 0.5rem;
+}
+
+.kontainer h1:hover {
+    text-align: center;
+    align-items: center;
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.atribusi {
+    font-size: 16px;
+    text-align: center;
+}
+
+.atribusi a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:500px) {
+    .kontainer {
+        width: 450px;
+        margin: 0 auto 1rem;
+    }
+}
